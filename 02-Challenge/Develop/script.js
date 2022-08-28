@@ -119,29 +119,29 @@ function getPasswordOptions() {
     'Click OK to confirm including special characters.'
   );
 
-  // Variable to store boolean regarding the inclusion of numeric characters
+  // Variable to store boolean to allow inclusion of numerical characters
   var hasNumericCharacters = confirm(
     'Click OK to confirm including numeric characters.'
   );
 
-  // Variable to store boolean regarding the inclusion of lowercase characters
+  // Variable to store boolean to allow inclusion of lowercase characters
   var hasLowerCasedCharacters = confirm(
     'Click OK to confirm including lowercase characters.'
   );
 
-  // Variable to store boolean regarding the inclusion of uppercase characters
+  // Variable to store boolean to allow inclusion of uppercase characters
   var hasUpperCasedCharacters = confirm(
     'Click OK to confirm including uppercase characters.'
   );
 
-  // Conditional statement to check if user does not include any types of characters. Password generator ends if all four variables evaluate to false
+  // Conditional statement to check if user does not include any types of characters. Password generator ends if all variables evaluation is false
   if (
     hasSpecialCharacters === false &&
     hasNumericCharacters === false &&
     hasLowerCasedCharacters === false &&
     hasUpperCasedCharacters === false
   ) {
-    alert('Must select at least one character type');
+    alert('At least one character type must be selected');
     return null;
   }
 
@@ -157,7 +157,7 @@ function getPasswordOptions() {
   return passwordOptions;
 }
 
-// Function for getting a random element from an array
+// Function for random elements from an array
 function getRandom(arr) {
   var randIndex = Math.floor(Math.random() * arr.length);
   var randElement = arr[randIndex];
